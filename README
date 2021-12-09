@@ -1,0 +1,46 @@
+Proyecto Final
+
+Este es un programa de clientes y productos, cuenta con funciones como, agregar, modificar y eliminar datos.
+
+La carpeta Interfaz de clientes cuenta con 6 archivos los cuales son: clientes, eliminar, login, modificar, nuevo, registro y ventana principal.
+
+Cliente: en este mostramos la visualizacion de la tabla clientes, como tambien los botones nuevo, modiicar, eliminar y regresar.
+Eliminar: en este podremos eliminar un registro, solamente con ingresar un usuario(registrado).
+Login: en este ingresaremos al sistema(Cliente) y contiene botones para registrarse y logearse.
+Modificar: en este podremos modificar datos de algun usuario registrado, tendremos un boton "Buscar" el cual 
+le añadiremos el usuario a modificar y te traeria todos los datos de ese usuario.
+Nuevo: en este este podremos registrar un nuevo usuario.
+Registro: en este, es donde nos registraremos para luego ingresar al sistema(Cliente).
+Ventana Principal: en este tendremos 2 botones Clientes y Productos, al clickear cualquiera de los 2 los llevara
+a la interfaz de la administracion de productos o de clientes, igual tendremos la opcion para cerrar sesion.
+
+
+La carpeta Interfaz de Producto cuenta con 6 archivos los cuales son: clientes, eliminar, login, modificar, nuevo y registro.
+
+EliminarProducto: en este podremos eliminar un producto, al ingresar el nombre de este (registrado).
+ModificarProducto: en este podremos modificar el precio o el stock de algun producto, tendremos un boton "Buscar" el cual 
+añadiremos el nombre del producto y automaticamente nos traera los datos de ese producto.
+NuevoProducto: en este este podremos registrar un nuevo producto.
+Productos: en este mostramos la visualizacion de la tabla productos, como tambien los botones nuevo, modiicar, eliminar y regresar.
+
+La carpeta Conexion cuenta con 3 archivos los cuales son: DBCusuario, DBconexion, DBregistro.
+
+DBCusuario: aqui encontramos el metodo para validar los usuarios y el email, para que no haya duplicados y el email este correctamente
+y el metodo de confirmar contraseña.
+DBconexion: aqui es donde se realiza la coneccion para llamar la base de datos a nuestro programa.
+DBregistro: aqui tenemos Strings almacenadas para usalas en el registro.
+
+
+Extras:
+*Todos los cambios se reflejan automaticamente en la jtable.
+*Usamos una base de datos remota.
+*Si dejamos los campos vacios en el registro nos sale una alerta.
+*Si las contraseñas no coinciden en el registro sale una alerta.
+*Si intentamos iniciar sesion sin datos sale una alerta.
+*Una vez agregamos, modificamos o aliminamos algun usuario o producto, este se vera reflejado automaticamente en la pantalla principal
+
+
+
+Este proyecto fue realizado con eclipse y mysql.
+
+Link video: https://drive.google.com/file/d/11Vrnd84x3MnwaF5ydMf8C8r171lkSGkJ/view?usp=sharing
