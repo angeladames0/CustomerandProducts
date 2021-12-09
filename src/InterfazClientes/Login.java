@@ -1,4 +1,4 @@
-package Interfaces;
+package InterfazClientes;
 
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -108,7 +108,7 @@ public class Login extends JFrame {
 					if(conexiones.login(Stringssave)) {
 
 						JOptionPane.showMessageDialog(null, "Has ingresado con exito!");
-						this.AbrirCliente();
+						this.AbrirVentanaPrincipal();
 
 					} else {
 						JOptionPane.showMessageDialog(null, "Datos invalidos");
@@ -118,9 +118,9 @@ public class Login extends JFrame {
 			}
 		}
 
-			public void AbrirCliente() {
-				Clientes frmClientes = new Clientes();
-				frmClientes.setVisible(true);
+			public void AbrirVentanaPrincipal() {
+				VentanaPrincipal frmVentanaPrincipal = new VentanaPrincipal();
+				frmVentanaPrincipal.setVisible(true);
 				dispose();
 			}
 

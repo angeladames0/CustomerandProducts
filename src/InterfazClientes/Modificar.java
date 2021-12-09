@@ -1,4 +1,4 @@
-package Interfaces;
+package InterfazClientes;
 
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -33,9 +33,9 @@ public class Modificar extends JFrame {
 	private JTextField Mtelefono;
 	private JTextField Mcorreo;
 
-	private final String user = "root";
-	private final String password = "12345678";
-	private final String url = "jdbc:mysql://localhost:3306/usuarios";
+	private final String user = "estuditlafinal";
+	private final String password = "itla123.";
+	private final String url = "jdbc:mysql://db4free.net/almacenitlafinal";
 	private Connection con = null;
 	PreparedStatement ps;
 	private JTextField Mid;
@@ -157,7 +157,7 @@ public class Modificar extends JFrame {
 					try {
 
 						con = getConection();
-						ps = (PreparedStatement) con.prepareStatement("UPDATE usuarios SET  usuario=?, nombre=?, apellido=?, telefono=?, correo=?, id=? WHERE usuario=?");
+						ps = (PreparedStatement) con.prepareStatement("UPDATE usuarios SET username=?, nombre=?, apellido=?, telefono=?, email=?, iduser=? WHERE username=?");
 						ps.setString(1, Musuario.getText());
 						ps.setString(2, Mnombre.getText());
 						ps.setString(3, Mapellido.getText());
@@ -171,6 +171,7 @@ public class Modificar extends JFrame {
 
 							JOptionPane.showMessageDialog(null, "Cliente modificado con exito");
 							limpiar();
+							dispose();
 							Clientes.TablaAct();
 
 
@@ -226,18 +227,18 @@ public class Modificar extends JFrame {
 				try {
 
 					con = getConection();
-					ps = (PreparedStatement) con.prepareStatement("SELECT * FROM usuarios WHERE usuario = ?");
+					ps = (PreparedStatement) con.prepareStatement("SELECT * FROM usuarios WHERE username = ?");
 					ps.setString(1, Musuario.getText() );
 
 					rs = ps.executeQuery();
 
 					if(rs.next()) {
-						Mid.setText(rs.getString("id"));
-						Musuario.setText(rs.getString("usuario"));
+						Mid.setText(rs.getString("iduser"));
+						Musuario.setText(rs.getString("username"));
 						Mnombre.setText(rs.getString("nombre"));
 						Mapellido.setText(rs.getString("apellido"));
 						Mtelefono.setText(rs.getString("telefono"));
-						Mcorreo.setText(rs.getString("correo"));
+						Mcorreo.setText(rs.getString("email"));
 
 
 					} else {

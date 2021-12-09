@@ -16,17 +16,17 @@ public class DBCusuario extends DBconexion {
 		PreparedStatement ps = null;
 		Connection con = getDBconexion();
 
-		String sql = "INSERT INTO usuarios (usuario, password, nombre, apellido, telefono, correo) VALUES (?,?,?,?,?,?)" ;
+		String sql = "INSERT INTO usuarios (username, nombre, apellido, telefono, email, password) VALUES (?,?,?,?,?,?)" ;
 
 		try {
 
 			ps = con.prepareStatement(sql);
 			ps.setString(1, usr.getUsuario());
-			ps.setString(2, usr.getPassword());
-			ps.setString(3, usr.getNombre());
-			ps.setString(4, usr.getApellido());
-			ps.setString(5, usr.getTelefono());
-			ps.setString(6, usr.getCorreo());
+			ps.setString(2, usr.getNombre());
+			ps.setString(3, usr.getApellido());
+			ps.setString(4, usr.getTelefono());
+			ps.setString(5, usr.getCorreo());
+			ps.setString(6, usr.getPassword());
 			ps.execute();
 			return true;
 
@@ -39,18 +39,18 @@ public class DBCusuario extends DBconexion {
 
 	}
 
-	public int validarusuario(String usuario)
+	public int validarusuario(String username)
 	{
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		Connection con = getDBconexion();
 
-		String sql = "SELECT count(id) FROM usuarios WHERE usuario = ?" ;
+		String sql = "SELECT count(iduser) FROM usuarios WHERE username = ?" ;
 
 		try {
 
 			ps = con.prepareStatement(sql);
-			ps.setString(1, usuario);
+			ps.setString(1, username);
 			rs = ps.executeQuery();
 
 			if(rs.next())
@@ -70,14 +70,14 @@ public class DBCusuario extends DBconexion {
 
 	}
 
-	public boolean validaremail(String correo)
+	public boolean validaremail(String email)
 	{
 
 
 		 Pattern pattern = Pattern.compile ("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
 			        + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
 
-		 Matcher mather = pattern.matcher(correo);
+		 Matcher mather = pattern.matcher(email);
 
 		 return mather.find();
 	}
@@ -88,7 +88,7 @@ public class DBCusuario extends DBconexion {
 		ResultSet rs = null;
 		Connection con = getDBconexion();
 
-		String sql = "SELECT id, usuario, password, nombre FROM usuarios WHERE usuario = ?" ;
+		String sql = "SELECT iduser, username, password, nombre FROM usuarios WHERE username = ?" ;
 
 		try {
 

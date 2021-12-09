@@ -1,4 +1,4 @@
-package Interfaces;
+package InterfazProducto;
 
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -23,14 +23,14 @@ import com.mysql.jdbc.PreparedStatement;
 
 import Conneccion.DBconexion;
 
-public class Eliminar extends JFrame {
+public class EliminarProducto extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField Eusuario;
+	private JTextField Pnombre;
 
-	private final String user = "root";
-	private final String password = "12345678";
-	private final String url = "jdbc:mysql://localhost:3306/usuarios";
+	private final String user = "estuditlafinal";
+	private final String password = "itla123.";
+	private final String url = "jdbc:mysql://db4free.net/almacenitlafinal";
 	private Connection con = null;
 	PreparedStatement ps;
 	private JTextField Mid;
@@ -62,7 +62,7 @@ public class Eliminar extends JFrame {
 			@Override
 			public void run() {
 				try {
-					Eliminar frame = new Eliminar();
+					EliminarProducto frame = new EliminarProducto();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -74,7 +74,7 @@ public class Eliminar extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Eliminar() {
+	public EliminarProducto() {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 393, 251);
 		contentPane = new JPanel();
@@ -82,14 +82,14 @@ public class Eliminar extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		JLabel usuario = new JLabel("Usuario");
-		usuario.setBounds(107, 72, 46, 14);
-		contentPane.add(usuario);
+		JLabel nombre = new JLabel("Nombre");
+		nombre.setBounds(107, 72, 46, 14);
+		contentPane.add(nombre);
 
-		Eusuario = new JTextField();
-		Eusuario.setBounds(160, 69, 114, 20);
-		contentPane.add(Eusuario);
-		Eusuario.setColumns(10);
+		Pnombre = new JTextField();
+		Pnombre.setBounds(160, 69, 114, 20);
+		contentPane.add(Pnombre);
+		Pnombre.setColumns(10);
 
 		JButton Ecancelar = new JButton("Cancelar");
 		Ecancelar.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -116,20 +116,21 @@ public class Eliminar extends JFrame {
 				try {
 
 					con = getConection();
-					ps = (PreparedStatement) con.prepareStatement("DELETE FROM usuarios WHERE usuario=?");
-					ps.setString(1, Eusuario.getText() );
+					ps = (PreparedStatement) con.prepareStatement("DELETE FROM productos WHERE nombreproducto=?");
+					ps.setString(1, Pnombre.getText() );
 
 					int res = ps.executeUpdate();
 
 					if (res > 0) {
-						JOptionPane.showMessageDialog(null, "Cliente eliminado");
+						JOptionPane.showMessageDialog(null, "Producto eliminado");
 						limpiar();
-						Clientes.TablaAct();
+						dispose();
+						Productos.TablaAct();
 
 
 					} else {
 
-						JOptionPane.showMessageDialog(null, "Eroor al eliminar cliente");
+						JOptionPane.showMessageDialog(null, "Eroor al eliminar producto");
 					}
 
 					con.close();
@@ -142,7 +143,7 @@ public class Eliminar extends JFrame {
 		}
 
 		private void limpiar() {
-			Eusuario.setText("");
+			Pnombre.setText("");
 
 		}
 
@@ -150,7 +151,7 @@ public class Eliminar extends JFrame {
 		Eeliminar.setBounds(233, 141, 124, 36);
 		contentPane.add(Eeliminar);
 
-		JLabel lblNewLabel = new JLabel("ELIMINAR CLIENTE");
+		JLabel lblNewLabel = new JLabel("ELIMINAR PRODUCTO");
 		lblNewLabel.setFont(new Font("Microsoft PhagsPa", Font.BOLD, 21));
 		lblNewLabel.setBounds(91, 0, 198, 36);
 		contentPane.add(lblNewLabel);

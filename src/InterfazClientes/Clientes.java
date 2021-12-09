@@ -1,4 +1,4 @@
-package Interfaces;
+package InterfazClientes;
 
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -101,19 +101,19 @@ public class Clientes extends JFrame {
 		btnEliminar.setBounds(330, 243, 119, 38);
 		contentPane.add(btnEliminar);
 
-		JButton btnCerrarSesion = new JButton("Cerrar Sesion");
+		JButton btnCerrarSesion = new JButton("Regresar");
 		btnCerrarSesion.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnCerrarSesion.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-			this.Cerrarsesion();
+			this.Regresar();
 
 			}
 
-			public void Cerrarsesion() {
-				Login frmLogin = new Login();
-				frmLogin.setVisible(true);
+			public void Regresar() {
+				VentanaPrincipal frmVentanaPrincipal = new VentanaPrincipal();
+				frmVentanaPrincipal.setVisible(true);
 			    dispose();
 			}
 
@@ -141,7 +141,7 @@ public class Clientes extends JFrame {
 		DBconexion conn = new DBconexion();
 		Connection con = conn.getDBconexion();
 
-		String sql = "SELECT nombre, apellido, telefono, correo, usuario FROM usuarios" ;
+		String sql = "SELECT nombre, apellido, telefono, email, username FROM usuarios" ;
 
 		Statement st;
 		DefaultTableModel model = new DefaultTableModel();

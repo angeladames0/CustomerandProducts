@@ -2,24 +2,25 @@ package Conneccion;
 
 public class DBregistro {
 
-	private int id;
-	private String usuario;
+	private int iduser;
+	private String username;
 	private String password;
 	private String nombre;
 	private String apellido;
 	private String telefono;
-	private String correo;
+	private String email;
+
 	public int getId() {
-		return id;
+		return iduser;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setId(int iduser) {
+		this.iduser = iduser;
 	}
 	public String getUsuario() {
-		return usuario;
+		return username;
 	}
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
+	public void setUsuario(String username) {
+		this.username = username;
 	}
 	public String getPassword() {
 		return password;
@@ -46,10 +47,10 @@ public class DBregistro {
 		this.telefono = telefono;
 	}
 	public String getCorreo() {
-		return correo;
+		return email;
 	}
-	public void setCorreo(String correo) {
-		this.correo = correo;
+	public void setCorreo(String email) {
+		this.email = email;
 	}
 
 

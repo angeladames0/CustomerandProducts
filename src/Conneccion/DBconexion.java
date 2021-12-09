@@ -9,9 +9,9 @@ import java.util.logging.Logger;
 
 public class DBconexion {
 
-	private final String user = "root";
-	private final String password = "12345678";
-	private final String url = "jdbc:mysql://localhost:3306/usuarios";
+	private final String user = "estuditlafinal";
+	private final String password = "itla123.";
+	private final String url = "jdbc:mysql://db4free.net/almacenitlafinal";
 	private Connection con = null;
 	PreparedStatement ps;
 

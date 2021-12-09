@@ -1,4 +1,4 @@
-package Interfaces;
+package InterfazClientes;
 
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -36,9 +36,9 @@ public class Nuevo extends JFrame {
 	private JPasswordField Npassword;
 
 
-	private final String user = "root";
-	private final String password = "12345678";
-	private final String url = "jdbc:mysql://localhost:3306/usuarios";
+	private final String user = "estuditlafinal";
+	private final String password = "itla123.";
+	private final String url = "jdbc:mysql://db4free.net/almacenitlafinal";
 	private Connection con = null;
 	PreparedStatement ps;
 
@@ -131,7 +131,7 @@ public class Nuevo extends JFrame {
 				try {
 
 					con = getConection();
-					ps = (PreparedStatement) con.prepareStatement("INSERT INTO usuarios (usuario, password, nombre, apellido, telefono, correo) VALUES (?,?,?,?,?,?)");
+					ps = (PreparedStatement) con.prepareStatement("INSERT INTO usuarios (username, password, nombre, apellido, telefono, email) VALUES (?,?,?,?,?,?)");
 					ps.setString(1, Nusuario.getText());
 					ps.setString(2, pass);
 					ps.setString(3, Nnombre.getText());
@@ -145,6 +145,7 @@ public class Nuevo extends JFrame {
 
 						JOptionPane.showMessageDialog(null, "Cliente Guardado");
 						limpiar();
+						dispose();
 						Clientes.TablaAct();
 
 

@@ -1,4 +1,4 @@
-package Interfaces;
+package InterfazClientes;
 
 import java.awt.EventQueue;
 import java.awt.Font;
