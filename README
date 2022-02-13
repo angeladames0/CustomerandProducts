@@ -1,46 +1,38 @@
-Proyecto Final
+This is a program for customers and products, it has functions such as add, modify and delete data.
 
-Este es un programa de clientes y productos, cuenta con funciones como, agregar, modificar y eliminar datos.
+The customer interface folder has 6 files which are: customers, delete, login, modify, new, register and main window.
 
-La carpeta Interfaz de clientes cuenta con 6 archivos los cuales son: clientes, eliminar, login, modificar, nuevo, registro y ventana principal.
-
-Cliente: en este mostramos la visualizacion de la tabla clientes, como tambien los botones nuevo, modiicar, eliminar y regresar.
-Eliminar: en este podremos eliminar un registro, solamente con ingresar un usuario(registrado).
-Login: en este ingresaremos al sistema(Cliente) y contiene botones para registrarse y logearse.
-Modificar: en este podremos modificar datos de algun usuario registrado, tendremos un boton "Buscar" el cual 
-le añadiremos el usuario a modificar y te traeria todos los datos de ese usuario.
-Nuevo: en este este podremos registrar un nuevo usuario.
-Registro: en este, es donde nos registraremos para luego ingresar al sistema(Cliente).
-Ventana Principal: en este tendremos 2 botones Clientes y Productos, al clickear cualquiera de los 2 los llevara
-a la interfaz de la administracion de productos o de clientes, igual tendremos la opcion para cerrar sesion.
+Client: in this one we show the visualization of the table clients, as well as the buttons new, modify, delete and return.
+Delete: in this one we will be able to delete a record, only with entering a user (registered).
+Login: in this one we will enter to the system (Client) and contains buttons to register and to log in.
+Modify: in this one we will be able to modify data of some registered user, we will have a button "Search" which we will add the user to 
+we will add the user to modify and it will bring you all the data of that user.
+New: in this one we will be able to register a new user.
+Register: in this one, is where we will register to enter to the system (Client).
+Main Window: in this we will have 2 buttons Clients and Products, when clicking any of the 2 will take you to the administration interface of the system.
+to the interface of the administration of products or clients, we will also have the option to close session.
 
 
-La carpeta Interfaz de Producto cuenta con 6 archivos los cuales son: clientes, eliminar, login, modificar, nuevo y registro.
+The Product Interface folder has 6 files which are: customers, delete, login, modify, new and register.
 
-EliminarProducto: en este podremos eliminar un producto, al ingresar el nombre de este (registrado).
-ModificarProducto: en este podremos modificar el precio o el stock de algun producto, tendremos un boton "Buscar" el cual 
-añadiremos el nombre del producto y automaticamente nos traera los datos de ese producto.
-NuevoProducto: en este este podremos registrar un nuevo producto.
-Productos: en este mostramos la visualizacion de la tabla productos, como tambien los botones nuevo, modiicar, eliminar y regresar.
+EliminateProduct: in this one we will be able to eliminate a product, when entering the name of this one (registered).
+ModifyProduct: in this we will be able to modify the price or the stock of some product, we will have a button "Search" in which we will add the name of the product 
+we will add the name of the product and automatically it will bring us the data of that product.
+NewProduct: in this one we will be able to register a new product.
+Products: in this one we show the visualization of the products table, as well as the buttons new, modify, delete and return.
 
-La carpeta Conexion cuenta con 3 archivos los cuales son: DBCusuario, DBconexion, DBregistro.
+The Connection folder has 3 files which are: DBCusuario, DBconexion, DBregistro.
 
-DBCusuario: aqui encontramos el metodo para validar los usuarios y el email, para que no haya duplicados y el email este correctamente
-y el metodo de confirmar contraseña.
-DBconexion: aqui es donde se realiza la coneccion para llamar la base de datos a nuestro programa.
-DBregistro: aqui tenemos Strings almacenadas para usalas en el registro.
+DBCusuario: here we find the method to validate the users and the email, so that there are no duplicates and the email is correct.
+and the method to confirm password.
+DBconnection: here is where the connection is made to call the database to our program.
+DBregistry: here we have Strings stored to use them in the registry.
 
 
 Extras:
-*Todos los cambios se reflejan automaticamente en la jtable.
-*Usamos una base de datos remota.
-*Si dejamos los campos vacios en el registro nos sale una alerta.
-*Si las contraseñas no coinciden en el registro sale una alerta.
-*Si intentamos iniciar sesion sin datos sale una alerta.
-*Una vez agregamos, modificamos o aliminamos algun usuario o producto, este se vera reflejado automaticamente en la pantalla principal
-
-
-
-Este proyecto fue realizado con eclipse y mysql.
-
-Link video: https://drive.google.com/file/d/11Vrnd84x3MnwaF5ydMf8C8r171lkSGkJ/view?usp=sharing
+*All changes are automatically reflected in the jtable.
+*We use a remote database.
+*If we leave empty fields in the registry we get an alert.
+*If the passwords do not coincide in the registry an alert comes out.
+*If we try to login without data we get an alert.
+*Once we add, modify or delete a user or product, this will be automatically reflected in the main screen.
